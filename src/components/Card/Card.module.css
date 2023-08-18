@@ -1,0 +1,84 @@
+.link, h2{
+    text-decoration: none;
+    color: black;
+}
+
+.card__container{
+    width: 250px;
+    height: 350px;
+    /* background-color: rgb(147,213,11); */
+    /* background-color: #bebebe; */
+    background: #00b256;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+    transition: all .3s;
+    box-shadow: -3px 0px 20px 5px rgba(0, 0, 0, 0.121);
+}
+
+
+.card__container:hover{
+    transform: translateY(-5px);
+}
+
+.card__container img{
+    width: 100%;
+    height: auto;
+}
+
+.card__container button{
+    font-size: 1.5rem;
+    color: #5A5A5A;
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    right: 0.5rem;
+    top: 0.5rem;
+}
+
+.card__information{
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+}
+
+h2{
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.card__status{
+    /* position: absolute; */
+    top: 5px;
+    left: 10px;
+    /* border-radius: 5px; */
+    border: 2px solid transparent;
+    padding: 0 5px;
+}
+
+.alive{
+    background: green;
+}
+
+.dead{
+    background: red;
+}
+
+.button__fav{
+    width: min-content;
+    position: absolute;
+    left: 0px;
+}
+
+/* .card__gender{
+    display: none;
+}
+
+.card__origin{
+    display: none;
+} */

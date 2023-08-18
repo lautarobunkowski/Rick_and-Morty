@@ -1,0 +1,38 @@
+.searchBar__container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    max-width: 300px;
+    gap: 1rem;
+}
+
+.searchBar__container input{
+    width: 50%;
+    outline: none;
+    padding: 0.5rem;
+    flex: 1;
+    height: 1.8rem;
+    border: none;
+    border-radius: 1rem;
+}
+
+.button{
+    font-weight: 600;
+    border: 2px solid transparent;
+    width: 100px;
+    align-self: center;
+    padding: 0 1.5rem;
+    color: white;
+    border: #2F362F;
+    background-color: #2F362F;
+    height: 2rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+.button:hover{
+    color: #2F362F;
+    border: 2px solid #2F362F;
+    background-color: white;
+}
