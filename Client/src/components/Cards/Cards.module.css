@@ -1,0 +1,26 @@
+.cards__container {
+  position: relative;
+  padding-top: 70px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  align-items: start;
+  align-content: flex-start;
+  height: auto;
+}
+
+.button__close{
+  position:absolute;
+  top: 20px;
+  font-weight: 600;
+  border: 2px solid transparent;
+  width: 100px;
+  color: white;
+  border: #2F362F;
+  background-color: #2F362F;
+  height: 2rem;
+  border-radius: 2rem;
+  cursor: pointer;
+}

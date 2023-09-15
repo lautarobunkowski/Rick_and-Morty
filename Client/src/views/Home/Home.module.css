@@ -1,0 +1,122 @@
+.home{
+    display: flex;
+    width: 100%;
+    padding: 0 10% 0 10%;
+    justify-content: space-evenly;
+    flex: 1;
+}
+
+.home__header{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
+}
+
+.home__headerInformation{
+    width: 40%;
+}
+
+.home__headerInformation h1{
+    color: #66C737;
+    font-size: 3rem;
+}
+
+.home__headerInformation h2{
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.home__imgContainer{
+    width: 60%;
+    position: relative;
+}
+
+.img__home{
+    height: auto;
+    width: 90%;
+}
+
+
+@keyframes movimiento-espacial {
+  0% {
+    transform: rotate(0deg) translateX(0);
+  }
+  50% {
+    transform: rotate(180deg) translateX(50px);
+  }
+  100% {
+    transform: rotate(360deg) translateX(0);
+  }
+}
+
+.img__object__1{
+    width: 20%;
+    height: auto;
+    border-radius: 1rem;
+    position: absolute;
+    bottom: 30%;
+    right: 5%;
+    transform: translate(-50%, -50%);
+    animation: movimiento-espacial 30s infinite linear;
+    z-index: -1;
+}
+
+.img__object__2{
+    width: 25%;
+    height: auto;
+    border-radius: 1rem;
+    position: absolute;
+    top: 35%;
+    right: 60%;
+    transform: translate(-50%, -50%);
+    animation: movimiento-espacial 30s infinite linear;
+    /* animation-delay: 15s; */
+}
+
+@media(max-width: 900px){
+    .home__header{
+        flex-direction: column-reverse;
+        justify-content:center;
+    }
+
+    .home__headerInformation{
+        width: 80%;
+    }
+
+    .home__imgContainer{
+        width: 80%;
+    }
+
+    .home__headerInformation h1{
+        font-size: 2rem;
+    }
+    
+    .home__headerInformation h2{
+        font-size: 1rem;
+        font-weight: 700;
+    }
+}
+
+@media(max-width: 700px){
+    .home__header{
+        gap: 2rem;
+    }
+
+    .home__imgContainer{
+        width: 90%;
+    }
+
+    .home__headerInformation h1{
+        font-size: 1.5rem;
+    }
+    
+    .home__headerInformation h2{
+        font-size: 1rem;
+    }
+}
+
+

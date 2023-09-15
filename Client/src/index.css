@@ -1,0 +1,32 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body, html{
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif; 
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: url(./utils/background.jpg);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+label{
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+::selection {
+  background-color: #C9DB41; /* Cambia "your-color" al color deseado */
+  color: black; /* Cambia "your-text-color" al color deseado para el texto seleccionado */
+}
