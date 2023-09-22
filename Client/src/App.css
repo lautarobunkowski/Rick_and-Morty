@@ -1,9 +1,52 @@
 .App {
-   text-align: center;
-   min-height: 100vh;
-   display: flex;
-   flex-direction: column;
-   justify-content: space-between;
+        overflow: hidden;
+        position: relative;
+        text-align: center;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+}
+
+@-webkit-keyframes kenburns-bottom {
+        0% {
+                -webkit-transform: scale(1) translateY(0);
+                transform: scale(1) translateY(0);
+                -webkit-transform-origin: 50% 84%;
+                transform-origin: 50% 84%;
+        }
+        100% {
+                -webkit-transform: scale(1.25) translateY(15px);
+                transform: scale(1.25) translateY(15px);
+                -webkit-transform-origin: bottom;
+                transform-origin: bottom;
+}
+}
+@keyframes kenburns-bottom {
+        0% {
+                -webkit-transform: scale(1) translateY(0);
+                transform: scale(1) translateY(0);
+                -webkit-transform-origin: 50% 84%;
+                transform-origin: 50% 84%;
+        }
+        100% {
+                -webkit-transform: scale(1.25) translateY(15px);
+                transform: scale(1.25) translateY(15px);
+                -webkit-transform-origin: bottom;
+                transform-origin: bottom;
+        }
+}
+
+.background-container{
+        background-image: url(./utils/background.jpg);
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        -webkit-animation: kenburns-bottom 5s ease-out both;
+	animation: kenburns-bottom 5s ease-out both;
 }
 
 

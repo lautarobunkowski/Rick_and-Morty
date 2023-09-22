@@ -30,11 +30,6 @@ const rootReducer = (state=initialState, action) => {
                 }
             })}
 
-        // case actions.REMOVE_FAV:
-        //     const deleteCharFav = state.favorites.filter(fav => fav.id !== Number(action.payload))
-        //     const deleteCharHome = state.allCharacters.filter(fav => fav.id !== Number(action.payload))
-        //     return {...state, favorites: deleteCharFav, allCharacters: deleteCharHome} 
-
         case actions.REMOVE_FAV:
             return { ...state, favorites: action.payload, allCharacters: action.payload};
 

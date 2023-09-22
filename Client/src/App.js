@@ -102,13 +102,14 @@ function App() {
 
    return (
       <div className='App'>
+         <div className="background-container"/>
          <Nav onSearch={searchCharacters} logOut={logOut}/>
          <Routes>
             <Route path='/'element={<Landing login={login}/>}/>
             <Route path='/home' element={<Home characters={characters} onClose={onClose} setCharacters={setCharacters}/>}/>
             <Route path='/about' element={<About/>}/>
             <Route path='/deatil/:id' element={<Deatil/>}/>
-            <Route path='/favorites' element={<Favorites/>}/>
+            <Route path='/favorites' element={<Favorites onClose={onClose}/>}/>
          </Routes>
          <Footer/>
       </div>

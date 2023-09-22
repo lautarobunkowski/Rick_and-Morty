@@ -1,13 +1,17 @@
 import {Link} from 'react-router-dom';
 import styles from "./Card.module.css";
 import { useState, useEffect } from 'react';
+import { useLocation } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { addFav, removeFav } from "../../redux/actions";
+import { BiSolidTrashAlt } from 'react-icons/bi';
+import { MdFavorite } from 'react-icons/md';
 
 export default function Card(props) {
    const dispatch = useDispatch();
    // const favorites = useSelector(state => state.favorites)
    const favorites = useSelector(state => state.allCharacters)
+   const actualLocation = useLocation().pathname;
 
    const [isFav, setIsFav] = useState(false)
 
@@ -31,29 +35,22 @@ export default function Card(props) {
 
    return (
       <div className={styles.card__container}>
-         <img src={props.image} alt={props.name} />
+         <Link className={styles.link} to={`/deatil/${props.id}`}>
+               <img className={styles.img__card} src={props.image} alt={props.name} />
+         </Link>
 
-         <button onClick={() => props.onClose(props.id)}>X</button>
+         <h2 className={`${styles.card__status} ${(props.status === "Alive")? styles.alive: styles.dead}`}>{props.status}</h2>
 
-         <h2 
-            className={`${styles.card__status} ${(props.status === "Alive")? styles.alive: styles.dead}`}
-            >{props.status}
-         </h2>
-
-         {isFav? (
-               <button className={styles.button__fav} onClick={handleFavorite}>❤️</button>
-            ): (
-               <button className={styles.button__fav} onClick={handleFavorite}>🤍</button>
-            )}
-
-         <div className={styles.card__information}>
-            <Link className={styles.link} to={`/deatil/${props.id}`}>
-               <h2>{props.name}</h2>
-            </Link>
-            <h2>{props.species}</h2>
-            {/* <h2 className={styles.card__gender}>{gender}</h2>
-            <h2 className={styles.card__origin}>{origin}</h2> */}
+         <div className={styles.buttons__container}>
+            {isFav? (
+                  <MdFavorite className={`${styles.button__fav} ${styles.isFav}`} onClick={handleFavorite}/>
+               ) : (
+                  <MdFavorite className={`${styles.button__fav} ${styles.notfav}`} onClick={handleFavorite}/>
+               )}
+            {actualLocation !== "/favorites"?
+            <BiSolidTrashAlt onClick={() => props.onClose(props.id)} className={styles.button__close}/>:null}
          </div>
+
       </div>
    )
 }

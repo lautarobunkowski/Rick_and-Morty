@@ -26,7 +26,6 @@ const Favorites = () => {
         <div className={styles.cards__container}>
             <div className={styles.selector__container}>
                 <select className={styles.selector__order} onChange={handleOrder}>
-                    {/* <option value="U">Sin Orden</option> */}
                     <option value="A">Ascendente</option>
                     <option value="D">Descendente</option>
                 </select>
@@ -49,7 +48,6 @@ const Favorites = () => {
                         gender={char.gender}
                         origin={char.origin.name}
                         image={char.image}
-                        // onClose={props.onClose}
                     />)
                 })
             }

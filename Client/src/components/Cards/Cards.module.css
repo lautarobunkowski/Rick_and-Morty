@@ -9,6 +9,7 @@
   align-items: start;
   align-content: flex-start;
   height: auto;
+  transition: all 0.3 ease;
 }
 
 .button__close{

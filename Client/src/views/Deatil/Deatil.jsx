@@ -13,7 +13,10 @@ const Deatil = () => {
          try {
             const {data} = await axios(`http://localhost:3001/rickandmorty/character/${id}`)
                   setCharacter(data);
-                  setLoading(false);
+                  // setLoading(false);
+                  setTimeout(() => {
+                     setLoading(false); // Cambia el estado a false después de 2000 ms (2 segundos)
+                  }, 1000);
          } catch (error) {
             window.alert(error.message)
          }
@@ -22,19 +25,21 @@ const Deatil = () => {
       return setCharacter({});
    }, [id])
 
-   return(
-   <div className={styles.container__Deatil}>
-      {loading ? <h1>Loading...</h1> : (
-      <div className={styles.container__Information}>
-         <h2 className={styles.name__Deatil}>{character.name}</h2>
-         <h2 className={styles.status__Deatil}>{character.status}</h2>
-         <h2 className={styles.species__Deatil}>{character.species}</h2>
-         <h2 className={styles.gender__Deatil}>{character.gender}</h2>
-         <h2 className={styles.origin__Deatil}>{character.origin.name}</h2>
+   return<div className={styles.container__Deatil}>
+      {loading ?
+         <div className='loader'></div> : (
+      <div className={styles.deatil}>
          <img className={styles.img__Deatil} src={character.image} alt={character.name} />
+         <div className={styles.deatil__information}>
+            <h2 className={styles.name__Deatil}>{character.name}</h2>
+            <h2 className={styles.status__Deatil}>{character.status}</h2>
+            <h2 className={styles.species__Deatil}>{character.species}</h2>
+            <h2 className={styles.gender__Deatil}>{character.gender}</h2>
+            <h2 className={styles.origin__Deatil}>{character.origin.name}</h2>
+         </div>
       </div>
    )}
-   </div>);
+   </div>;
 }
 
 export default Deatil;

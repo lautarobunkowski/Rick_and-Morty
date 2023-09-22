@@ -12,17 +12,17 @@ const Footer = () => {
                         <p>lautibunko@gmail.com</p>
                     </li> */}
                     <li>
-                        <Link className={styles.instagram} to='/about'>
+                        <Link target="_blank" className={styles.instagram} to='https://www.instagram.com/lautarobunkowski/'>
                             <BiLogoInstagram/>
                         </Link>
                     </li>
                     <li>
-                        <Link className={styles.facebook} to='/about'>
+                        <Link target="_blank" className={styles.facebook} to='https://www.facebook.com/lautaro.bunkowski.9'>
                             <BiLogoFacebookCircle/>
                         </Link>
                     </li>
                     <li>
-                        <Link className={styles.linkedin} to='/about'>
+                        <Link target="_blank" className={styles.linkedin} to='https://www.linkedin.com/in/lautaro-bunkowski-4830b6161'>
                             <BiLogoLinkedin/>
                         </Link>
                     </li>

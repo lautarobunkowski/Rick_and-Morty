@@ -25,7 +25,11 @@ const Nav = (props) => {
                         Favorites
                     </Link>
                 </li>
-                <li onClick={props.logOut}>Log Out</li>
+                <li onClick={props.logOut}>
+                    <Link className={styles.link}>
+                        Log Out
+                    </Link>
+                </li>
             {!actualLocation.startsWith('/deatil/') && !actualLocation.startsWith('/about') && !actualLocation.startsWith('/favorites') && <SearchBar onSearch={props.onSearch}/>}
             </ul>
     </nav>

@@ -1,6 +1,67 @@
+.about__container h3{
+    color: white;
+    font-size: 3rem;
+}
+.about__container h4{
+    color: #66C737;
+    font-size: 1.5rem;
+}
+
+@keyframes moverNavecita {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(110vw);
+    }
+}
+
+.about__car{
+    z-index: -1;
+    position: absolute;
+    top: 300px;
+    left: -200px;
+    width: 100px;
+    height: auto;
+    animation: moverNavecita 20s linear infinite;
+}
+
 .about__container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     padding: 70px 10% 50px 10%;
     width: 100%;
     color: white;
     flex: 1;
+    gap: 2rem;
+}
+
+.about__page, .about__me{
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    border-radius: 2rem;
+    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    max-width: 600px;
+}
+
+.about__page:hover, .about__me:hover{
+    transform: scale(1.1, 1.1);
+    background-color: #66C737;
+}
+
+.about__page:hover .about__pageA,
+.about__me:hover .about__meA,
+.about__me:hover h4
+{
+    color: rgb(0, 0, 0);
+}
+
+.about__pageA, .about__meA{
+    font-weight: 700;
+    align-self: flex-start;
+    color: #66C737;
 }

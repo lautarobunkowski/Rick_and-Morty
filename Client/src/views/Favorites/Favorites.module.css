@@ -8,8 +8,7 @@
    gap: 2rem;
    justify-content: center;
    align-items: start;
-
-  /* Establece el tamaño del contenedor */
+   align-content: flex-start;
    height: auto;
    width: 100%;
 }
@@ -39,5 +38,7 @@
    cursor: pointer;
    outline: none;
 }
+
+
 
 
