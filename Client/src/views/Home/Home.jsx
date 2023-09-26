@@ -5,10 +5,12 @@ import styles from './Home.module.css';
 import img_home from "./Background_Home.png";
 import img_object_1 from "./object_1.png";
 import img_object_2 from "./object_2.png";
+// ---------------------------------------
+import 'animate.css';
 
 const Home = (props) => {
   return (
-      <div className={styles.home}>
+      <div className={`animate__animated animate__fadeInUp ${styles.home}`}>
         {props.characters.length === 0?(
           <>
             <div className={styles.home__header}>

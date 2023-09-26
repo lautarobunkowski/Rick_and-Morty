@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { orderCards, filterCards } from "../../redux/actions";
 import Card from "../../components/Card/Card.jsx";
 import styles from "./Favorites.module.css";
+import rick_volando from "./rick_volando.png";
 
 const Favorites = () => {
     const [aux, setAux] = useState(false);
@@ -24,6 +25,12 @@ const Favorites = () => {
     const favorites = useSelector(state => state.favorites);
     return (
         <div className={styles.cards__container}>
+            {favorites.length === 0 &&(
+                <div className={styles.not__favoritesContainer}>
+                    <img src={rick_volando} className={styles.not__favorites} alt="rick_volando" />
+                    <h3 className={styles.not__favoritesText}>No hay Favoritos</h3>
+                </div>
+            )}
             <div className={styles.selector__container}>
                 <select className={styles.selector__order} onChange={handleOrder}>
                     <option value="A">Ascendente</option>
@@ -38,7 +45,7 @@ const Favorites = () => {
                 </select>
             </div>
             {
-                favorites.map(char => {
+                favorites.length > 0 && favorites.map(char => {
                     return (<Card
                         id={char.id}
                         key={char.id}
