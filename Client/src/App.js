@@ -16,7 +16,7 @@ import {Routes, Route, useNavigate} from 'react-router-dom'
 // ---------  ACTIONS  ---------
 import { deleteChars } from "./redux/actions.js";
 import axios from "axios";
-
+axios.defaults.baseURL = "https://rickand-morty-production.up.railway.app/rickandmorty/"
 
 function App() {
    const [characters, setCharacters] = useState([])
@@ -40,7 +40,7 @@ function App() {
    const login = async (userData) => {
       try {
          const { email, password } = userData;
-         const URL = 'http://localhost:3001/rickandmorty/login';
+         const URL = '/login';
          const { data }  = await axios.get(URL +`?email=${email}&password=${password}`)
          setAccess(data.access);
          data.access && navigate('/home');
@@ -59,7 +59,7 @@ function App() {
    }
    const searchCharacters = async (id) => {
       try {
-         const { data } = await axios(`http://localhost:3001/rickandmorty/character/${id}`)
+         const { data } = await axios(`/character/${id}`)
 
          if(buscarPersonaje(characters, data)){
             window.alert('Ya hay personajes con ese ID');
