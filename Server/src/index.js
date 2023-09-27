@@ -31,7 +31,9 @@
 //     // return res.end('Page not Found');
 
 // }).listen(PORT, 'localhost')
+
 const server = require("./app.js");
+require('dotenv').config();
 const PORT = process.env.PORT || 3001;
 
 server.listen(PORT, () => {
