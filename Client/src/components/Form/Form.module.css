@@ -111,3 +111,38 @@
     font-weight: 500;
     color: red;
 }
+
+@media(max-width: 1050px) {
+    .form__container{
+        width: 70%;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .form__imgContainer{
+        width: 100%;
+        height: 50%;
+    }
+
+    .form__imgBackground{
+        width: 300px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .form__img{
+        width: 400px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .form{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+}

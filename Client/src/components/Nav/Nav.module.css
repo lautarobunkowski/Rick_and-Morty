@@ -15,6 +15,10 @@ background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(20,16,39,0.5046393557
     box-shadow: 0px 10px 10px 10px rgba(0, 0, 0, 0.121);
 }
 
+.nav__container :global(.active){
+    color: #66C737;
+}
+
 .nav{
     display: flex;
     flex-wrap: wrap;

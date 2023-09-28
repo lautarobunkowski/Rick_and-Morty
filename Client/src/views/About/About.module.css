@@ -12,7 +12,7 @@
         transform: translateX(0);
     }
     100% {
-        transform: translateX(110vw);
+        transform: translateX(140vw);
     }
 }
 
@@ -23,7 +23,7 @@
     left: -200px;
     width: 100px;
     height: auto;
-    animation: moverNavecita 20s linear infinite;
+    animation: moverNavecita 15s linear infinite;
 }
 
 .about__container{
@@ -31,7 +31,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    padding: 70px 10% 50px 10%;
+    padding: 30px 10% 50px 10%;
     width: 100%;
     color: white;
     flex: 1;
@@ -43,13 +43,13 @@
     display: flex;
     flex-direction: column;
     border-radius: 2rem;
-    padding: 2rem;
+    padding: 1.5rem;
     background-color: rgba(0, 0, 0, 0.5);
     max-width: 600px;
 }
 
 .about__page:hover, .about__me:hover{
-    transform: scale(1.1, 1.1);
+    transform: scale(1.05, 1.05);
     background-color: #66C737;
 }
 

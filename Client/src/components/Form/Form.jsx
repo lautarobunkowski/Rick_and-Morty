@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState} from 'react'
 import validation from "./validation.js";
 import styles from "./Form.module.css";
 import Button from "../Button.jsx";
@@ -32,8 +32,8 @@ const Form = (props) => {
   return (
     <form onSubmit={handleSubmit} className={styles.form__container}>
         <div className={styles.form__imgContainer}>
-            <img className={styles.form__imgBackground} src={imageFormBack} alt="image form Background"/>
-            <img className={styles.form__img} src={imageForm} alt="image form" />
+            <img className={styles.form__imgBackground} src={imageFormBack} alt="Background"/>
+            <img className={styles.form__img} src={imageForm} alt="form" />
         </div>
         <div className={styles.form}>
             <h3>Hola! Bienvenidos</h3>

@@ -33,9 +33,13 @@
 // }).listen(PORT, 'localhost')
 
 const server = require("./app.js");
+const { conn } = require("./DB_connection.js");
 require('dotenv').config();
 const PORT = process.env.PORT || 3001;
 
-server.listen(PORT, () => {
-    console.log("Server raised in port: " + PORT)
+conn.sync({force: true})
+.then(() => {
+    server.listen(PORT, () => {
+        console.log("Server raised in port: " + PORT)
+    })
 })

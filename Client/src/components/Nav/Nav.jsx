@@ -1,5 +1,5 @@
 import SearchBar from "../SearchBar/SearchBar.jsx"
-import {Link, useLocation} from 'react-router-dom'
+import {Link, NavLink, useLocation} from 'react-router-dom'
 import styles from './Nav.module.css'
 import img__nav from './Rick_and_Morty.png';
 
@@ -8,27 +8,29 @@ const Nav = (props) => {
 
     return (actualLocation !== '/')?(
         <nav className={styles.nav__container}>
-            <img className={styles.img__nav} src={img__nav} alt="logo" />
+            <Link to='/home'>
+                <img className={styles.img__nav} src={img__nav} alt="logo" />
+            </Link>
             <ul className={styles.nav}>
                 <li>
-                    <Link className={styles.link} to='/about'>
-                        About
-                    </Link>
-                </li>
-                <li>
-                    <Link className={styles.link} to='/home'>
+                    <NavLink className={styles.link} to='/home'>
                         Home
-                    </Link>
+                    </NavLink>
                 </li>
                 <li>
-                    <Link className={styles.link} to='/favorites'>
+                    <NavLink className={styles.link} to='/favorites'>
                         Favorites
-                    </Link>
+                    </NavLink>
+                </li>
+                <li>
+                    <NavLink className={styles.link} to='/about'>
+                        About
+                    </NavLink>
                 </li>
                 <li onClick={props.logOut}>
-                    <Link className={styles.link}>
+                    <NavLink className={styles.link} to='/'>
                         Log Out
-                    </Link>
+                    </NavLink>
                 </li>
             {!actualLocation.startsWith('/deatil/') && !actualLocation.startsWith('/about') && !actualLocation.startsWith('/favorites') && <SearchBar onSearch={props.onSearch}/>}
             </ul>

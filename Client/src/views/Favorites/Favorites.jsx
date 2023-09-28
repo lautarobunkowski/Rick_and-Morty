@@ -27,8 +27,8 @@ const Favorites = () => {
         <div className={styles.cards__container}>
             {favorites.length === 0 &&(
                 <div className={styles.not__favoritesContainer}>
-                    <img src={rick_volando} className={styles.not__favorites} alt="rick_volando" />
-                    <h3 className={styles.not__favoritesText}>No hay Favoritos</h3>
+                    <img src={rick_volando} className={styles.not__favoritesImg} alt="rick_volando" />
+                    <p className={styles.not__favoritesText}>No hay Favoritos</p>
                 </div>
             )}
             <div className={styles.selector__container}>
