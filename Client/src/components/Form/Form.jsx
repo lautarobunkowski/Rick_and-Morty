@@ -66,7 +66,10 @@ const Form = (props) => {
                     <p className={styles.danger}>{errors.password}</p>): null}
                 </div>
 
-                <Button type='submit' text="Submit"/>
+                {/* <Button type='submit' text="Submit"/> */}
+                <div className={styles.button__container}>
+                    <button className={styles.button} type='submit'>Submit</button>
+                </div>
             </div>
         </div>
     </form>
