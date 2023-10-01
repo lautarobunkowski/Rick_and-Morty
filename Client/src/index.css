@@ -38,8 +38,6 @@ label{
 
 .loader {
     position: absolute;
-    top: 50%;
-    left: 50%;
     width: 50px;
     padding: 8px;
     aspect-ratio: 1;
