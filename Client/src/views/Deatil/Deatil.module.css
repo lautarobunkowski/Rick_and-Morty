@@ -98,6 +98,7 @@
 
 @media(max-width: 730px) {
     .deatil{
+        position: relative;
         flex-direction: column;
         justify-content: center;
         align-items: center;
@@ -113,13 +114,13 @@
     }
 
     .deatil__information{
-        left: 0;
+        left: 100%;
         width: 250px;
         height: 250px;
     }
 
     .deatil:hover .deatil__information{
-        transform: translate(-50%, 50%);
+        transform: translate(-100%, 50%);
         height: 250px;
         width: 250px;
     }
