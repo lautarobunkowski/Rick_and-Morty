@@ -12,7 +12,7 @@
         transform: translateX(0);
     }
     100% {
-        transform: translateX(140vw);
+        transform: translateX(150vw);
     }
 }
 
@@ -23,7 +23,7 @@
     left: -200px;
     width: 100px;
     height: auto;
-    animation: moverNavecita 15s linear infinite;
+    animation: moverNavecita 12s linear infinite;
 }
 
 .about__container{

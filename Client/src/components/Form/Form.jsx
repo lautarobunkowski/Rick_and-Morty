@@ -36,8 +36,8 @@ const Form = (props) => {
             <img className={styles.form__img} src={imageForm} alt="form" />
         </div>
         <div className={styles.form}>
-            <h3>Hola! Bienvenidos</h3>
-            <h4>Ingresa a tu cuenta:</h4>
+            <h3>Welcome!</h3>
+            <h4>Log in to your account</h4>
             <div className={styles.form__information}>
                 <div className={styles.form__email}>
                     <label htmlFor="#">Correo Electronico:</label>
@@ -66,9 +66,9 @@ const Form = (props) => {
                     <p className={styles.danger}>{errors.password}</p>): null}
                 </div>
 
-                {/* <Button type='submit' text="Submit"/> */}
+                
                 <div className={styles.button__container}>
-                    <button className={styles.button} type='submit'>Submit</button>
+                    <Button type='submit' text="Submit"/>
                 </div>
             </div>
         </div>
