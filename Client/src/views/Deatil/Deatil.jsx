@@ -11,7 +11,7 @@ const Deatil = () => {
    useEffect(() => {
       const fetchData = async() => {
          try {
-            const {data} = await axios(`http://localhost:3001/rickandmorty/character/${id}`)
+            const {data} = await axios(`/character/${id}`)
                   setCharacter(data);
                   // setLoading(false);
                   setTimeout(() => {

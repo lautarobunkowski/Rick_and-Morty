@@ -44,8 +44,8 @@
 }
 
 .deatil:hover .deatil__information{
-    transform: translateX(-45%);
-    width: 700px;
+    transform: translateX(-50%);
+    width: 600px;
     z-index: 1;
 }
 
@@ -58,3 +58,80 @@
     color: white;
 }
 
+@media(max-width: 1000px) {
+    .deatil{
+        align-items:  center;
+    }
+
+    .img__Deatil{
+        width: 300px;
+        height: 300px;
+    }
+
+    .deatil:hover .img__Deatil{
+        transform: translateX(-60%);
+    }
+
+    .deatil__information{
+        top: 3rem;
+        height: 250px;
+        width: 300px;
+        transform: translateX(-100%);
+    }
+
+    .deatil:hover .deatil__information{
+        transform: translateX(-50%);
+        width: 400px;
+    }
+
+    .name__Deatil{
+        font-size: 2rem;
+    }
+
+    .status__Deatil, 
+    .species__Deatil,
+    .gender__Deatil,
+    .origin__Deatil{
+        font-size: 1.25rem;
+    }
+}
+
+@media(max-width: 730px) {
+    .deatil{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .img__Deatil{
+        width: 250px;
+        height: 250px;
+    }
+
+    .deatil:hover .img__Deatil{
+        transform: translateY(-40%);
+    }
+
+    .deatil__information{
+        width: 250px;
+        height: 250px;
+    }
+
+    .deatil:hover .deatil__information{
+        left: 50%;
+        transform: translate(-50%, 50%);
+        width: 250px;
+    }
+
+    .name__Deatil{
+        font-size: 1.5rem;
+    }
+
+    .status__Deatil, 
+    .species__Deatil,
+    .gender__Deatil,
+    .origin__Deatil{
+        font-size: 1rem;
+        font-weight: 300;
+    }
+}
