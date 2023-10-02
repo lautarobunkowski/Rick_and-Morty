@@ -37,9 +37,9 @@ const Form = (props) => {
         </div>
         <div className={styles.form}>
             <h3>Welcome!</h3>
-            <h4>Log in to your account</h4>
+            {/* <h4>Log in to your account</h4> */}
             <div className={styles.form__information}>
-                <div className={styles.form__email}>
+                {/* <div className={styles.form__email}>
                     <label htmlFor="#">Correo Electronico:</label>
                     <input 
                         value={userData.email} 
@@ -50,9 +50,9 @@ const Form = (props) => {
 
                     {(errors.email)?(
                     <p className={styles.danger}>{errors.email}</p>): null}
-                </div>
+                </div> */}
                 
-                <div className={styles.form__password}>
+                {/* <div className={styles.form__password}>
                     <label htmlFor="#">Contraseña:</label>
                     <input 
                         value={userData.password} 
@@ -64,11 +64,11 @@ const Form = (props) => {
 
                     {(errors.password)?(
                     <p className={styles.danger}>{errors.password}</p>): null}
-                </div>
+                </div> */}
 
                 
                 <div className={styles.button__container}>
-                    <Button type='submit' text="Submit"/>
+                    <Button type='submit' text="Join"/>
                 </div>
             </div>
         </div>
