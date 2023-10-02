@@ -11,12 +11,14 @@ import Landing from './views/Landing/Landing.jsx'
 import Favorites from "./views/Favorites/Favorites";
 import Deatil from './views/Deatil/Deatil.jsx';
 import Footer from "./components/Footer/Footer.jsx";
+import UpScroll from "./components/UpScroll/UpScroll";
 // ---------  REACT DOM  ---------
 import {Routes, Route, useNavigate} from 'react-router-dom'
 // ---------  ACTIONS  ---------
 import { deleteChars } from "./redux/actions.js";
 import axios from "axios";
-axios.defaults.baseURL = "https://rickand-morty-production.up.railway.app/rickandmorty/"
+// axios.defaults.baseURL = "https://rickand-morty-production.up.railway.app/rickandmorty/"
+axios.defaults.baseURL = "http://localhost:3001/rickandmorty/"
 
 function App() {
    const [characters, setCharacters] = useState([])
@@ -24,8 +26,6 @@ function App() {
    
    const navigate = useNavigate(); //ruta actual
    const [access, setAccess] = useState(false); // estado de acceso
-   // const EMAIL = 'lautibunko@gmail.com'; //mock
-   // const PASSWORD = '43244847'; //mock
 
    // const login = (userData) => {
    //    if(userData.email === EMAIL && userData.password === PASSWORD){
@@ -111,6 +111,7 @@ function App() {
             <Route path='/deatil/:id' element={<Deatil/>}/>
             <Route path='/favorites' element={<Favorites onClose={onClose}/>}/>
          </Routes>
+         <UpScroll/>
          <Footer/>
       </div>
    );

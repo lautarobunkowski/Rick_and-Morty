@@ -1,0 +1,16 @@
+.button{
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    position: fixed;
+    bottom: 10vh;
+    right: 5vw;
+    background-color: #66C737;
+    border: none;
+    color: white;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+}
