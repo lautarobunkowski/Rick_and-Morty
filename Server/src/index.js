@@ -26,21 +26,20 @@
 //     //                     error: 'Character not found'
 //     //                 }));
 //     //             }
-//     // } 
+//     // }
 //     // res.writeHead(404, {'Content-Type': 'text/plain'});
 //     // return res.end('Page not Found');
 
 // }).listen(PORT, 'localhost')
 
-const server = require("./app.js");
-const { conn } = require("./DB_connection.js");
-require('dotenv').config();
-const PORT = process.env.PORT || 3001;
+// const server = require("./app.js");
+// const { conn } = require("./DB_connection.js");
+// require('dotenv').config();
+// const PORT = process.env.PORT || 3001;
 
-conn.sync({force: true})
-.then(() => {
-    server.listen(PORT, () => {
-        console.log("Server raised in port: " + PORT)
-    })
-})
-
+// conn.sync({force: true})
+// .then(() => {
+//     server.listen(PORT, () => {
+//         console.log("Server raised in port: " + PORT)
+//     })
+// })
