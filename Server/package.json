@@ -6,11 +6,8 @@
   "directories": {
     "test": "test"
   },
-  "engines":{
-    "node": "18.x"
-  },
   "scripts": {
-    "start": "node index.js",
+    "start": "node ./src/index.js",
     "test": "jest --detectOpenHandles --coverage"
   },
   "author": "",
