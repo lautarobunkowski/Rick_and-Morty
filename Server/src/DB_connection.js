@@ -11,7 +11,7 @@ const FavoriteModel = require("./models/Favorite.js")
 // URL ----> postgres://DB_USER:DB_PASSWORD@DB_HOST/rickandmorty
 const sequelize = new Sequelize(
    `postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}:${DB_PORT}/${DB_NAME}`,
-   { logging: false, native: false }
+   { logging: false, native: false, dialectModule: pg,}
 );
 
 // EJERCICIO 05
