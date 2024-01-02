@@ -17,8 +17,7 @@ import { Routes, Route, useNavigate } from "react-router-dom";
 // ---------  ACTIONS  ---------
 import { deleteChars } from "./redux/actions.js";
 import axios from "axios";
-axios.defaults.baseURL =
-  "https://rick-and-morty-backend-bicf.onrender.com/rickandmorty/";
+axios.defaults.baseURL = "https://rick-and-morty-zjy1.vercel.app/rickandmorty/";
 // axios.defaults.baseURL = "http://localhost:3001/rickandmorty/";
 
 function App() {
