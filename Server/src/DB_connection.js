@@ -1,8 +1,8 @@
 require("dotenv").config();
 const { Sequelize } = require("sequelize");
 const { DB_USER, DB_PASSWORD, DB_HOST, DB_PORT, DB_NAME } = process.env;
-const UserModel = require("./src/models/User.js");
-const FavoriteModel = require("./src/models/Favorite.js");
+const UserModel = require("./models/User.js");
+const FavoriteModel = require("./models/Favorite.js");
 const { pg } = require("pg");
 
 // EJERCICIO 03
